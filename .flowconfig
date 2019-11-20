@@ -1,0 +1,8 @@
+[include]
+./lib
+
+[ignore]
+.*/build/.*
+.*/dist/.*
+.*/test/.*
+.*/docs/.*
