@@ -1,16 +1,23 @@
-### @qt-web/prompt-audio
+### @qt-vue/track-navigation-bar
 
 ### Get Started
- 1. 安装`@qt-web/prompt-audio`
+ 1. 安装`@qt-vue/track-navigation-bar`
  ```bash
-    npm i --save  @qt-web/prompt-audio
+    npm i --save  @qt-vue/track-navigation-bar
  ```
 
- 2. 引入模块
+ 2. 如何使用
 ```javascript
-import audio from '@qt-web/prompt-audio'
+import TrackNavBar from '@qt-vue/track-navigation-bar'
+
+Vue.use(TrackNavBar,[options])
+
+options.navPosition //定位 默认值{top:'100px',right:'200px'}
 ```
 
-3. 详见[docs](https://git2.qingtingfm.com/web/lib-web-prompt-audio/blob/master/docs/v0.0.1.md)文档：
-
+```html
+<TrackNavBar style="height: 700px" :navPosition=navPosition>
+   <slot></slot>
+</TrackNavBar>
+```
 

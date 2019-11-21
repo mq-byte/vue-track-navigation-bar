@@ -5,7 +5,7 @@
                 <slot></slot>
             </div>
         </div>
-        <div class="nav" ref="navTitle">
+        <div class="nav" ref="navTitle" :style="{...navPosition}">
             <div class="navList" v-for="(v,i) in h4s" :key="i" :class="{active:(i === activeIndex)}" @click="scrollTo(i)">
                 {{v.innerHTML}}
             </div>
@@ -17,6 +17,9 @@
     export default {
         name: "TrackNavBar",
         props:{
+            navPosition:{
+                type:Object
+            },
 
         },
         data(){
@@ -82,8 +85,6 @@
 }
 .nav{
     position: fixed;
-    top: 100px;
-    right: 100px;
     height: 200px;
     overflow-y: auto;
     width: 150px;
