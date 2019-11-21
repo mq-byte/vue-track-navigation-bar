@@ -87,13 +87,22 @@
     height: 200px;
     overflow-y: auto;
     width: 150px;
-    background: white;
+    border: 1px solid #ebeef5;
+    background-color: #fff;
+    color: #303133;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
     /*max-width: 150px;*/
 }
 .nav>div{
     cursor: pointer;
+    padding: 10px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
 }
 .nav>div.active{
     color: red;
+
 }
 </style>
