@@ -23,4 +23,4 @@
  ```
 
 ### 演示
-![](./navigation.gif)
+![](https://raw.githubusercontent.com/QiuyangQ/vue-track-navigation-bar/master/navigation.gif)
