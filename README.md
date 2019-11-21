@@ -21,3 +21,5 @@ options.navPosition //定位 默认值{top:'100px',right:'200px'}
 </TrackNavBar>
 ```
 
+### 演示
+![](./navigation.gif)
