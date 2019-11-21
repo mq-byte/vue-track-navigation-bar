@@ -1,15 +1,15 @@
-### @qt-vue/track-navigation-bar
+### vue-track-navigation-bar
 
 ### Get Started
- 1. 安装`@qt-vue/track-navigation-bar`
+ 1. 安装`vue-track-navigation-bar`
  ```bash
-    npm i --save  @qt-vue/track-navigation-bar
+    npm i --save  vue-track-navigation-bar
  ```
 
  2. 如何使用
 
  ```js
- import TrackNavBar from '@qt-vue/track-navigation-bar'
+ import TrackNavBar from 'vue-track-navigation-bar'
 
  Vue.use(TrackNavBar,[options])
 
@@ -23,4 +23,4 @@
  ```
 
 ### 演示
-![](https://git2.qingtingfm.com/web/lib-vue-track-navigation-bar/raw/master/navigation.gif)
+![](./navigation.gif)
