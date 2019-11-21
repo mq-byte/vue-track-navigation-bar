@@ -5,8 +5,8 @@
                 <slot></slot>
             </div>
         </div>
-        <div class="nav">
-            <div v-for="(v,i) in h4s" :key="i" v-html="v.innerHTML" :class="{active:(i === activeIndex)}" @click="scrollTo(i)">
+        <div class="nav" ref="navTitle">
+            <div class="navList" v-for="(v,i) in h4s" :key="i" :class="{active:(i === activeIndex)}" @click="scrollTo(i)">
                 {{v.innerHTML}}
             </div>
         </div>
@@ -27,8 +27,7 @@
                 content:null,
                 h4s:[],
                 h4sTops:[],
-                activeIndex:0,
-                clickId:-1
+                activeIndex:0
             }
         },
         mounted(){
@@ -38,26 +37,31 @@
             this.h4s = this.content.querySelectorAll('h4');
             this.firstScroll = false;
             for(let i = 0;i < this.h4s.length;i++){
-                this.h4sTops.push(this.h4s[i].offsetTop-this.boxOffsetTop-this.contentBox.scrollTop)
+                this.h4sTops.push({offsetTop:this.h4s[i].offsetTop-10,allHeight:this.h4s[i].offsetTop+this.h4s[i].offsetHeight+Number(this.h4s[i].style.margin)+10})
             }
         },
         methods:{
             scroll(){
-                for(let i = 0;i < this.h4s.length;i++){
-                    let h4sTops = this.h4s[i].offsetTop-this.boxOffsetTop-this.contentBox.scrollTop;
-                    if(h4sTops*this.h4sTops[i]<=0){
+                for(let i = 0;i < this.h4sTops.length;i++){
+                    if(this.contentBox.scrollTop>=this.h4sTops[i].offsetTop && this.contentBox.scrollTop <= this.h4sTops[i].allHeight){
                         this.activeIndex = i;
+                        break;
                     }
-                    this.h4sTops[i] = h4sTops;
                 }
-
+                let navTitle = this.$refs.navTitle;
+                navTitle.scrollTo({
+                    left: 0,
+                    top: navTitle.querySelectorAll('.navList')[this.activeIndex].offsetTop,
+                    behavior: 'smooth'
+                })
             },
             scrollTo(i){
                 this.contentBox.scrollTo({
                     left: 0,
-                    top: this.h4s[i].offsetTop-10,
+                    top: this.h4s[i].offsetTop,
                     behavior: 'smooth'
                 })
+                this.activeIndex = i;
             }
         }
     }
@@ -68,6 +72,9 @@
     margin: 0;
     padding: 0;
 }
+.content{
+    position: relative;
+}
 .content-box{
     width: 100%;
     height: 100%;
@@ -77,6 +84,11 @@
     position: fixed;
     top: 100px;
     right: 100px;
+    height: 200px;
+    overflow-y: auto;
+    width: 150px;
+    background: white;
+    /*max-width: 150px;*/
 }
 .nav>div{
     cursor: pointer;
