@@ -7,19 +7,20 @@
  ```
 
  2. 如何使用
-```javascript
-import TrackNavBar from '@qt-vue/track-navigation-bar'
 
-Vue.use(TrackNavBar,[options])
+ ```js
+ import TrackNavBar from '@qt-vue/track-navigation-bar'
 
-options.navPosition //定位 默认值{top:'100px',right:'200px'}
-```
+ Vue.use(TrackNavBar,[options])
 
-```html
-<TrackNavBar style="height: 700px" :navPosition=navPosition>
-   <slot></slot>
-</TrackNavBar>
-```
+ options.navPosition //定位 默认值{top:'100px',right:'200px'}
+ ```
+
+ ```html
+ <TrackNavBar style="height: 700px" :navPosition=navPosition>
+    <slot></slot>
+ </TrackNavBar>
+ ```
 
 ### 演示
 ![](https://git2.qingtingfm.com/web/lib-vue-track-navigation-bar/raw/master/navigation.gif)

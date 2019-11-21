@@ -1,6 +1,6 @@
 {
   "name": "@qt-vue/track-navigation-bar",
-  "version": "v0.0.2",
+  "version": "v0.0.3",
   "description": "这是一个文章标题与title导航联动的vue组件",
   "main": "./dist/lib-vue-track-navigation-bar.js",
   "scripts": {
