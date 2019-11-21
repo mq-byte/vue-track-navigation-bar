@@ -22,4 +22,4 @@ options.navPosition //定位 默认值{top:'100px',right:'200px'}
 ```
 
 ### 演示
-![](./navigation.gif)
+![](https://git2.qingtingfm.com/web/lib-vue-track-navigation-bar/raw/master/navigation.gif)
