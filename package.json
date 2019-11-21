@@ -1,5 +1,5 @@
 {
-  "name": "@qt-vue/track-navigation-bar",
+  "name": "vue-track-navigation-bar",
   "version": "v0.0.3",
   "description": "这是一个文章标题与title导航联动的vue组件",
   "main": "./dist/lib-vue-track-navigation-bar.js",
@@ -19,7 +19,7 @@
     "url": "git@git2.qingtingfm.com:web/lib-web-prompt-audio.git"
   },
   "keywords": [
-    "文章标题与title导航联动"
+    "文章标题与title导航联动,vue"
   ],
   "author": "qiuyang02",
   "license": "ISC",
