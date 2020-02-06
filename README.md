@@ -23,4 +23,4 @@
  ```
 
 ### 演示
-![](https://raw.githubusercontent.com/QiuyangQ/vue-track-navigation-bar/master/navigation.gif)
+![演示地址](https://raw.githubusercontent.com/QiuyangQ/vue-track-navigation-bar/master/navigation.gif)
